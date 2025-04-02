@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Card, CardContent } from "@/components/ui/card";
+// Removed unused imports
+// import { useState } from "react";
+// import { Card, CardContent } from "@/components/ui/card";
 
 interface SidebarProps {
   className?: string;

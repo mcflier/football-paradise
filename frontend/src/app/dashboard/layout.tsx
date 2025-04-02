@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Sidebar } from "@/components/sidebar";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const [socket, setSocket] = useState<WebSocket | null>(null);
-  const [notifications, setNotifications] = useState<WebSocketMessage[]>([]);
+  // const [notifications, setNotifications] = useState<WebSocketMessage[]>([]);
   const [showNotification, setShowNotification] = useState(false);
   const [latestNotification, setLatestNotification] = useState<WebSocketMessage | null>(null);
 
@@ -50,10 +50,11 @@ export default function DashboardLayout({
         socket.close();
       }
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   const handleWebSocketMessage = (message: WebSocketMessage) => {
-    setNotifications(prev => [...prev, message]);
+    // setNotifications(prev => [...prev, message]);
     setLatestNotification(message);
     setShowNotification(true);
     

@@ -108,8 +108,8 @@ export default function MaddenExportPage() {
                       <li>Copy the URL above</li>
                       <li>Open the Madden Companion App on your device</li>
                       <li>Select your league</li>
-                      <li>Tap on "Export League"</li>
-                      <li>Paste the URL and tap "Export"</li>
+                      <li>Tap on &quot;Export League&quot;</li>
+                      <li>Paste the URL and tap &quot;Export&quot;</li>
                       <li>Select the data you want to export</li>
                     </ol>
                   </div>

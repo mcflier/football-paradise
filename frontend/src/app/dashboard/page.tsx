@@ -15,7 +15,7 @@ interface League {
 }
 
 export default function DashboardPage() {
-  const { data: session, status } = useSession({
+  const { status } = useSession({
     required: true,
     onUnauthenticated() {
       redirect("/auth/login");
@@ -64,7 +64,7 @@ export default function DashboardPage() {
           <CardContent>
             {leagues.length === 0 ? (
               <div className="text-center py-8">
-                <p className="text-slate-400 mb-4">You don't have any leagues yet.</p>
+                <p className="text-slate-400 mb-4">You don&apos;t have any leagues yet.</p>
                 <Button className="bg-indigo-600 hover:bg-indigo-700" asChild>
                   <Link href="/dashboard/leagues/create">Create New League</Link>
                 </Button>
