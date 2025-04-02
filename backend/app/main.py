@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 import os
 from dotenv import load_dotenv
 
+from app.api import leagues, madden_export
+
 # Load environment variables
 load_dotenv()
 
@@ -21,6 +23,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include routers
+app.include_router(leagues.router)
+app.include_router(madden_export.router)
 
 # Root endpoint
 @app.get("/")
